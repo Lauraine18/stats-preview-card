@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    background-color:#1f192e;
+    height: 100vh; 
+}
+ h1{
+     font-size: 33px;
+     color: white;
+     font-family: arial;
+     position: absolute;
+     top: 25%;
+     bottom: 30%;
+     left:5%;
+ }
+ .description em{
+     color: blueviolet;
+     font-family:serif;
+ }
+
+ p{
+     color: white;
+    display:flex ;
+    line-height:25px;
+    font-size: 15px;
+     position: absolute;
+     top: 40%;
+     bottom: 40%;
+     left:5%;
+ }
+
+ .down-section{
+     color:white;
+     padding-left: 10%;
+     margin-right: 18%;
+    display: flex;
+     font-family:arial;
+     font-weight: bold;
+    
+ }
+ 
+ img{
+     
+   color:purple;
+   opacity: 0.5;
+    width: 50%;
+    height: 60%;
+     margin-left: 50%;
+ }
