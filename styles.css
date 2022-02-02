@@ -1,52 +1,123 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.background{
-    background-color:#1f192e;
-    height: 100vh; 
+body {
+  font-size: 16px;
+  font-family: arial;
+  color: white;
+  padding: 5rem 5vw;
 }
- h1{
-     font-size: 33px;
-     color: white;
-     font-family: arial;
-     position: absolute;
-     top: 25%;
-     bottom: 30%;
-     left:5%;
- }
- .description em{
-     color: blueviolet;
-     font-family:serif;
- }
 
- p{
-     color: white;
-    display:flex ;
-    line-height:25px;
-    font-size: 15px;
-     position: absolute;
-     top: 40%;
-     bottom: 40%;
-     left:5%;
- }
+h1 {
+  font-size: 33px;
+}
 
- .down-section{
-     color:white;
-     padding-left: 10%;
-     margin-right: 18%;
-    display: flex;
-     font-family:arial;
-     font-weight: bold;
-    
- }
- 
- img{
-     
-   color:purple;
-   opacity: 0.5;
-    width: 50%;
-    height: 60%;
-     margin-left: 50%;
- }
+p {
+  line-height: 25px;
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.7;
+}
+
+img {
+  color: purple;
+  width: 100%;
+}
+
+.background {
+  background-color: #090b1a;
+  height: 100vh;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  background-color: #1b1938;
+  margin: auto;
+  max-width: 1100px;
+  min-height: 400px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  border-radius: 1rem;
+}
+
+.card__column {
+  padding: 3.5vw 8vw 3.5vw 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card__title-purple {
+  color: #aa5cdb;
+}
+
+.side-image {
+  border-radius: 0 1rem 1rem 0;
+  position: relative;
+  background: url(./image-header-desktop.jpg) no-repeat;
+  background-size: cover;
+}
+
+.side-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(120, 1, 194, 0.4);
+}
+
+@media (max-width: 936px) {
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 18rem auto;
+  }
+
+  .side-image {
+    border-radius: 1rem 1rem 0 0;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .card__column {
+    padding: 4rem 2rem;
+
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .stats {
+    align-self: center;
+    flex-direction: column;
+  }
+}
